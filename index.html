@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- 🔷 HEADER -->
+  <header class="glass">
+    <h1>📋 Smart Task Manager</h1>
+
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search tasks..." />
+
+      <select id="filterStatus">
+        <option value="all">All</option>
+        <option value="completed">Completed</option>
+        <option value="pending">Pending</option>
+      </select>
+
+      <select id="filterPriority">
+        <option value="all">All Priority</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+
+      <button id="toggleTheme">Theme</button>
+    </div>
+  </header>
+
+  <!-- 📝 ADD TASK -->
+  <section class="glass form-section">
+    <input type="text" id="title" placeholder="Enter task..." />
+
+    <select id="priority">
+      <option value="High">High</option>
+      <option value="Medium">Medium</option>
+      <option value="Low">Low</option>
+    </select>
+
+    <select id="category">
+      <option value="Work">Work</option>
+      <option value="Personal">Personal</option>
+      <option value="Study">Study</option>
+    </select>
+
+    <input type="datetime-local" id="dueDate">
+    <button onclick="addTask()">➕ Add</button>
+  </section>
+
+  <!-- 📊 PROGRESS -->
+  <section class="progress glass">
+    <div id="progressBar"></div>
+  </section>
+
+  <div class="chart-container">
+  <canvas id="taskChart"></canvas>
+</div>
+
+  <!-- 📌 TASK LIST -->
+  <section id="taskList" class="task-list"></section>
+
+  <!-- 🚀 EMPTY STATE -->
+  <div id="emptyState" class="glass empty">
+    No tasks yet — Start your productivity!
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

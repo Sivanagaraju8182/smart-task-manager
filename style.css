@@ -1,0 +1,218 @@
+/* 🌈 Background */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+/* 📦 Container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* 🧊 Glass UI */
+.glass {
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+/* 🔷 Header */
+header h1 {
+  text-align: center;
+}
+
+/* 🎛 Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* 📝 Form */
+.form-section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* 🎯 Inputs */
+input, select, button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* 🔘 Button */
+button {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  color: white;
+  cursor: pointer;
+}
+
+/* 🧊 Hover */
+button:hover {
+  transform: scale(1.05);
+}
+
+/* 📋 Task Grid */
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 15px;
+}
+
+/* 📌 Task Card */
+.task {
+  padding: 15px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.15);
+}
+
+/* 🎨 Priority Colors */
+.high { border-left: 5px solid red; }
+.medium { border-left: 5px solid orange; }
+.low { border-left: 5px solid lightgreen; }
+
+/* ✅ Completed */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* ⏰ Overdue */
+.overdue {
+  border: 2px solid red;
+}
+
+/* 📊 Progress */
+.progress {
+  height: 10px;
+  background: rgba(255,255,255,0.2);
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: lime;
+}
+
+/* 🚀 Empty */
+.empty {
+  text-align: center;
+}
+
+/* 🌙 Dark Mode */
+body.dark {
+  background: #121212;
+}
+
+/* 📱 Responsive */
+@media(max-width:600px){
+  header h1 {
+    font-size: 18px;
+  }
+}
+
+/* 🧱 Task Card Layout */
+.task {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+}
+
+/* 🔝 Header */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* 🎯 Priority Badge */
+.badge {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.badge.high { background: #ff4d4d; }
+.badge.medium { background: #ffa500; }
+.badge.low { background: #00cc88; }
+
+/* 📄 Body */
+.task-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.label {
+  font-weight: 600;
+  opacity: 0.8;
+  margin-right: 6px;
+}
+
+/* 🔘 Buttons */
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.complete-btn {
+  flex: 1;
+  background: #4CAF50;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  color: white;
+}
+
+.delete-btn {
+  flex: 1;
+  background: #ff4d4d;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  color: white;
+}
+
+/* ✨ Hover Effects */
+.complete-btn:hover,
+.delete-btn:hover {
+  transform: scale(1.05);
+}
+
+.task {
+  transition: 0.3s;
+}
+
+.task:hover {
+  transform: translateY(-5px);
+}
+
+.chart-container {
+  width: 300px;        /* control size here */
+  height: 300px;
+  margin: 20px auto;   /* center horizontally */
+}
+
+#taskChart {
+  width: 100% !important;
+  height: 100% !important;
+}
