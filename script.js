@@ -305,5 +305,5 @@ document.getElementById("filterPriority").addEventListener("change", renderTasks
 renderTasks();
 
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js");
+  navigator.serviceWorker.register("/sw.js");
 }
