@@ -307,8 +307,8 @@ renderTasks();
 if ("serviceWorker" in navigator) {
   if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("/sw.js")
-      .then(() => console.log("Service Worker Registered"))
+    navigator.serviceWorker.register("./sw.js")
+      .then(() => console.log("SW Registered"))
       .catch(err => console.log("SW Error:", err));
   });
 }
