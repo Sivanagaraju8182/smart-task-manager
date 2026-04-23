@@ -305,5 +305,11 @@ document.getElementById("filterPriority").addEventListener("change", renderTasks
 renderTasks();
 
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/sw.js");
+  if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js")
+      .then(() => console.log("Service Worker Registered"))
+      .catch(err => console.log("SW Error:", err));
+  });
+}
 }
