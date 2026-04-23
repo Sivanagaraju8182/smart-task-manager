@@ -303,3 +303,7 @@ document.getElementById("filterPriority").addEventListener("change", renderTasks
 
 // ===============================
 renderTasks();
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+}
